@@ -1,0 +1,444 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Olá
+      - Oi
+      - Ei
+      - Bom dia
+      - Boa tarde
+      - Boa noite
+      - E aí
+      - Como vai?
+      - Tudo bem?
+      - Salve
+  - intent: list_commands
+    examples: |
+      - Liste todos os comandos
+      - Me mostre os comandos
+      - Quais são os comandos disponíveis?
+      - Que comandos posso usar?
+      - Mostre todos os comandos
+      - Quais são os comandos que você conhece?
+      - Liste os comandos que posso usar
+      - Quais comandos estão disponíveis?
+      - Exiba todos os comandos
+      - Quero ver todos os comandos
+      - Me diga os comandos que você tem
+      - Quais são os comandos que eu posso usar?
+      - Mostre-me os comandos
+      - Que comandos você tem?
+      - Liste os comandos disponíveis
+      - Me fale sobre os comandos
+      - Quero saber os comandos disponíveis
+      - Quais são os comandos do sistema?
+      - Me mostre a lista de comandos
+      - O que eu posso comandar?
+      - Quais comandos eu posso dar?
+      - Mostre a lista completa de comandos
+      - Liste os comandos do assistente
+      - Quais são todos os comandos?
+      - Me informe sobre os comandos
+      - Quais comandos existem?
+      - Mostre todos os comandos disponíveis
+      - O que posso fazer com comandos?
+      - Liste as opções de comandos
+      - Quero ver a lista de comandos
+      - Quais comandos posso emitir?
+      - Me diga todos os comandos
+      - Que comandos existem?
+      - Exiba a lista de comandos
+      - Quais são os comandos que posso usar?
+      - Mostre todas as opções de comandos
+      - Que comandos posso utilizar?
+      - Liste as opções disponíveis de comandos
+      - Me mostre os comandos possíveis
+      - Quais são as instruções que posso dar?
+      - Me mostre as instruções disponíveis
+      - Quais são as opções de comandos?
+      - Mostre-me todas as instruções possíveis
+      - Quais são as instruções que posso usar?
+      - Quais instruções posso dar?
+      - Me informe sobre as instruções
+      - Mostre todas as instruções disponíveis
+      - Quais são todas as instruções possíveis?
+      - Exiba todas as instruções que posso usar
+      - Que instruções existem?
+
+  - intent: list_tasks
+    examples: |
+      - Liste todas as tarefas
+      - Me mostre as tarefas
+      - Quais são as tarefas agendadas?
+      - Quais tarefas estão programadas?
+      - Mostre todas as tarefas
+      - Que tarefas estão na agenda?
+      - Liste as tarefas do dia
+      - Quais são as tarefas para hoje?
+      - Quero ver todas as tarefas
+      - Quais tarefas tenho para fazer?
+      - Quais são as minhas tarefas?
+      - Mostre minhas tarefas
+      - Liste as tarefas de hoje
+      - Quais são as tarefas pendentes?
+      - Quais tarefas eu tenho?
+      - Exiba todas as tarefas
+      - Me diga as tarefas agendadas
+      - Quais são as tarefas do dia?
+      - Me mostre as tarefas planejadas
+      - Que tarefas estão agendadas?
+      - Quais tarefas estão previstas?
+      - Mostre-me as tarefas
+      - O que eu tenho para fazer hoje?
+      - Quais são as minhas tarefas agendadas?
+      - Quais tarefas estão no cronograma?
+      - Quais são as tarefas na agenda?
+      - Me mostre a lista de tarefas
+      - Que tarefas eu preciso fazer?
+      - Quais tarefas estão pendentes?
+      - Quais são as atividades programadas?
+      - Quais atividades eu tenho hoje?
+      - Liste as atividades do dia
+      - Mostre todas as atividades
+      - Quais são as atividades para hoje?
+      - Quais são as minhas atividades?
+      - Mostre minhas atividades
+      - Liste as atividades agendadas
+      - Que atividades estão na agenda?
+      - Me mostre as atividades programadas
+      - Quais são as atividades previstas?
+      - Quais atividades eu preciso fazer?
+      - Mostre as atividades agendadas
+      - Quais são as atividades pendentes?
+      - Exiba todas as atividades
+      - Me diga as atividades do dia
+      - Quais são as atividades na agenda?
+      - Quais são as atividades planejadas?
+      - Que atividades estão previstas?
+      - Me mostre a lista de atividades
+      - Quais são as atividades no cronograma?
+
+  - intent: list_devices
+    examples: |
+      - Liste todos os dispositivos
+      - Me mostre os dispositivos
+      - Quais são os dispositivos disponíveis?
+      - Quais dispositivos eu tenho?
+      - Mostre todos os dispositivos
+      - Que dispositivos estão conectados?
+      - Liste os dispositivos conectados
+      - Quais dispositivos estão ativos?
+      - Exiba todos os dispositivos
+      - Quero ver todos os dispositivos
+      - Me diga os dispositivos disponíveis
+      - Quais dispositivos estão na rede?
+      - Mostre-me os dispositivos
+      - Que dispositivos estão disponíveis?
+      - Liste os dispositivos ativos
+      - Me fale sobre os dispositivos
+      - Quero saber os dispositivos disponíveis
+      - Quais são os dispositivos conectados?
+      - Me mostre a lista de dispositivos
+      - O que eu posso controlar?
+      - Quais dispositivos eu posso usar?
+      - Mostre a lista completa de dispositivos
+      - Liste os dispositivos do sistema
+      - Quais são todos os dispositivos?
+      - Me informe sobre os dispositivos
+      - Quais dispositivos existem?
+      - Mostre todos os dispositivos disponíveis
+      - O que posso controlar com dispositivos?
+      - Liste as opções de dispositivos
+      - Quero ver a lista de dispositivos
+      - Quais dispositivos posso acessar?
+      - Me diga todos os dispositivos
+      - Que dispositivos existem?
+      - Exiba a lista de dispositivos
+      - Quais são os dispositivos que posso usar?
+      - Mostre todas as opções de dispositivos
+      - Que dispositivos posso utilizar?
+      - Liste as opções disponíveis de dispositivos
+      - Me mostre os dispositivos possíveis
+      - Quais são os aparelhos conectados?
+      - Me mostre os aparelhos disponíveis
+      - Quais são as opções de dispositivos?
+      - Mostre-me todas as opções de dispositivos
+      - Quais são os aparelhos conectados à rede?
+      - Quais aparelhos posso usar?
+      - Me informe sobre os aparelhos conectados
+      - Mostre todas as opções de aparelhos
+      - Quais são todos os aparelhos disponíveis?
+      - Exiba todas as opções de aparelhos que posso usar
+      - Que aparelhos existem?
+
+  - intent: list_events
+    examples: |
+      - Liste todos os eventos
+      - Me mostre os eventos
+      - Quais são os eventos agendados?
+      - Quais eventos estão programados?
+      - Mostre todos os eventos
+      - Que eventos estão na agenda?
+      - Liste os eventos do dia
+      - Quais são os eventos para hoje?
+      - Quero ver todos os eventos
+      - Quais eventos tenho para ir?
+      - Quais são os meus eventos?
+      - Mostre meus eventos
+      - Liste os eventos de hoje
+      - Quais são os eventos pendentes?
+      - Quais eventos eu tenho?
+      - Exiba todos os eventos
+      - Me diga os eventos agendados
+      - Quais são os eventos do dia?
+      - Me mostre os eventos planejados
+      - Que eventos estão agendados?
+      - Quais eventos estão previstos?
+      - Mostre-me os eventos
+      - O que eu tenho para fazer hoje?
+      - Quais são os meus eventos agendados?
+      - Quais eventos estão no cronograma?
+      - Quais são os eventos na agenda?
+      - Me mostre a lista de eventos
+      - Que eventos eu preciso ir?
+      - Quais eventos estão pendentes?
+      - Quais são as atividades programadas?
+      - Quais atividades eu tenho hoje?
+      - Liste as atividades do dia
+      - Mostre todas as atividades
+      - Quais são as atividades para hoje?
+      - Quais são os meus eventos?
+      - Mostre meus eventos
+      - Liste os eventos agendados
+      - Que eventos estão na agenda?
+      - Me mostre os eventos programados
+      - Quais são os eventos previstos?
+      - Quais eventos eu preciso ir?
+      - Mostre os eventos agendados
+      - Quais são os eventos pendentes?
+      - Exiba todos os eventos
+      - Me diga os eventos do dia
+      - Quais são os eventos na agenda?
+      - Quais são os eventos planejados?
+      - Que eventos estão previstos?
+      - Me mostre a lista de eventos
+      - Quais são os eventos no cronograma?
+
+  - intent: list_users
+    examples: |
+      - Liste todos os usuários
+      - Me mostre os usuários
+      - Quem são os usuários cadastrados?
+      - Quais usuários estão registrados?
+      - Mostre todos os usuários
+      - Que usuários estão no sistema?
+      - Liste os usuários cadastrados
+      - Quais usuários estão ativos?
+      - Exiba todos os usuários
+      - Quero ver todos os usuários
+      - Me diga os usuários cadastrados
+      - Quais usuários estão na base?
+      - Mostre-me os usuários
+      - Que usuários estão registrados?
+      - Liste os usuários ativos
+      - Me fale sobre os usuários
+      - Quero saber os usuários cadastrados
+      - Quais são os usuários registrados?
+      - Me mostre a lista de usuários
+      - Quem eu posso contatar?
+      - Quais são os usuários no sistema?
+      - Quem está registrado como usuário?
+      - Quais são os usuários disponíveis?
+      - Quem está na lista de usuários?
+      - Mostre todos os usuários registrados
+      - Quais são os usuários ativos?
+      - Quem está cadastrado?
+      - Liste os usuários no banco de dados
+      - Quem está no sistema?
+      - Exiba a lista de usuários
+      - Quem está ativo como usuário?
+      - Quais são os usuários atuais?
+      - Quem está na lista de usuários ativos?
+      - Quais são os usuários cadastrados no sistema?
+      - Quem são os membros registrados?
+      - Me mostre todos os usuários cadastrados
+      - Quais usuários estão atualmente ativos?
+      - Quem está registrado no sistema?
+      - Quem faz parte dos usuários?
+      - Quem são os atuais usuários?
+      - Mostre a lista de todos os usuários
+      - Quais são os usuários registrados atualmente?
+      - Quem está cadastrado como usuário?
+      - Quais são os usuários na base de dados?
+      - Quem está listado como usuário?
+      - Quem está no sistema como usuário?
+      - Quem são os usuários registrados no sistema?
+      - Quem são os usuários ativos no momento?
+      - Me diga quem são os usuários
+      - Quais usuários estão na lista de usuários?
+      - Quem faz parte dos usuários registrados?
+      - Quem está no sistema de usuários?
+
+  - intent: list_high_priority_events
+    examples: |
+      - Liste todos os eventos com alta prioridade
+      - Quais são os eventos de alta prioridade?
+      - Me mostre os eventos mais importantes
+      - Quais eventos são de alta prioridade?
+      - Quais são os eventos urgentes?
+      - Me mostre os eventos prioritários
+      - Liste os eventos de alta prioridade
+      - Quais eventos precisam de atenção imediata?
+      - Quais eventos são mais importantes?
+      - Mostre-me os eventos de alta prioridade
+      - Quais são os eventos mais urgentes?
+      - Quais eventos têm alta prioridade?
+      - Mostre os eventos de alta prioridade
+      - Quais são os eventos importantes?
+      - Quais eventos têm prioridade alta?
+      - Liste os eventos prioritários
+      - Quais eventos são considerados urgentes?
+      - Quais eventos são mais críticos?
+      - Mostre os eventos urgentes
+      - Quais são os eventos críticos?
+      - Quais eventos têm maior prioridade?
+      - Liste os eventos urgentes
+      - Quais são os eventos de maior prioridade?
+      - Quais eventos são mais urgentes?
+      - Me mostre os eventos críticos
+      - Quais são os eventos com maior prioridade?
+      - Quais eventos precisam de atenção?
+      - Quais são os eventos prioritários?
+      - Liste os eventos críticos
+      - Quais eventos são considerados de alta prioridade?
+      - Quais eventos são mais relevantes?
+      - Mostre os eventos que têm alta prioridade
+      - Quais eventos são mais críticos?
+      - Quais são os eventos que precisam de atenção?
+      - Quais são os eventos prioritários?
+      - Quais eventos têm urgência?
+      - Mostre os eventos que são importantes
+      - Quais eventos têm maior urgência?
+      - Quais são os eventos de prioridade alta?
+      - Quais eventos precisam de atenção urgente?
+      - Quais são os eventos com alta prioridade?
+      - Quais eventos são de grande importância?
+      - Liste os eventos mais importantes
+      - Quais são os eventos com maior urgência?
+      - Mostre os eventos que precisam de atenção imediata
+      - Quais eventos são mais relevantes?
+      - Quais são os eventos críticos?
+      - Quais eventos têm alta urgência?
+      - Quais são os eventos urgentes?
+
+  - intent: get_event_details
+    examples: |
+      - Quais são os detalhes do evento [aniversarioCarlos](event)?
+      - Me mostre os detalhes do evento [consultorioDentista](event)
+      - Quero saber mais sobre o evento [festaHalloween](event)
+      - Me dê os detalhes do evento [reuniaoNegocios](event)
+      - Quais informações temos sobre o evento [aniversarioMaria](event)?
+      - Me fale sobre o evento [palestraTech](event)
+      - Quero mais informações sobre o evento [cinemaComAmigos](event)
+      - Quais são os detalhes do evento [jantarNatal](event)?
+      - Mostre-me os detalhes do evento [viagemPraia](event)
+      - O que sabemos sobre o evento [almoçoFamilia](event)?
+      - Me forneça detalhes do evento [treinamentoEmpresa](event)
+      - Diga-me mais sobre o evento [workshopPython](event)
+      - Quais são os pormenores do evento [festaAniversario](event)?
+      - Quero conhecer mais sobre o evento [reuniaoEquipe](event)
+      - Me mostre as informações do evento [casamentoJoaoAna](event)
+      - O que temos sobre o evento [conferenciaXYZ](event)?
+      - Me conte mais sobre o evento [visitaMedica](event)
+      - Quais são os detalhes do evento [torneioFutebol](event)?
+      - Quais informações estão disponíveis para o evento [apresentacaoProjeto](event)?
+      - Me fale mais sobre o evento [sessaoCinema](event)
+      - Quero saber os detalhes do evento [reuniaoPais](event)
+      - Mostre os detalhes do evento [passeioParque](event)
+      - Diga-me os detalhes do evento [jantarEmpresa](event)
+      - O que temos de informações sobre o evento [aniversarioFilho](event)?
+      - Me forneça mais informações sobre o evento [showBanda](event)
+      - Quais são os pormenores do evento [entrevistaTrabalho](event)?
+      - Quero mais detalhes sobre o evento [almoçoAmigos](event)
+      - Me mostre as informações do evento [cerimoniaPremiacao](event)
+      - O que sabemos sobre o evento [encontroNetworking](event)?
+      - Me conte mais sobre o evento [aulaIngles](event)
+      - Quais são os detalhes do evento [palestraMotivacional](event)?
+      - Quais informações temos sobre o evento [reuniaoProjeto](event)?
+      - Me fale sobre o evento [sessaoFotografica](event)
+      - Quero mais informações sobre o evento [conferenciaTI](event)
+      - Quais são os detalhes do evento [happyHour](event)?
+      - Mostre-me os detalhes do evento [treinamentoEquipe](event)
+      - O que sabemos sobre o evento [festaSurpresa](event)?
+      - Me forneça detalhes do evento [passeioMontanha](event)
+      - Diga-me mais sobre o evento [workshopInteligenciaArtificial](event)
+      - Quais são os pormenores do evento [confraternizacaoEmpresa](event)?
+      - Quero conhecer mais sobre o evento [reuniaoConselho](event)
+      - Me mostre as informações do evento [visitaCliente](event)
+      - O que temos sobre o evento [seminarioEducação](event)?
+      - Me conte mais sobre o evento [sessaoYoga](event)
+      - Quais são os detalhes do evento [encontroFamilia](event)?
+      - Quais informações estão disponíveis para o evento [conferenciaSaude](event)?
+      - Me fale mais sobre o evento [cerimoniaGraduacao](event)
+      - Quero saber os detalhes do evento [passeioMuseu](event)
+
+  - intent: get_user_details
+    examples: |
+      - Quais são os detalhes do usuário [JohnDoe](user)?
+      - Me mostre os detalhes do usuário [aliceJohnson](user)
+      - Quero saber mais sobre o usuário [joaoSilva](user)
+      - Me dê os detalhes do usuário [mariaOliveira](user)
+      - Quais informações temos sobre o usuário [pedroSantos](user)?
+      - Me fale sobre o usuário [anaSouza](user)
+      - Quero mais informações sobre o usuário [carlosPereira](user)
+      - Quais são os detalhes do usuário [lauraMendes](user)?
+      - Mostre-me os detalhes do usuário [joseLima](user)
+      - O que sabemos sobre o usuário [fernandaCosta](user)?
+      - Me forneça detalhes do usuário [marcosBarbosa](user)
+      - Diga-me mais sobre o usuário [beatrizGomes](user)
+      - Quais são os pormenores do usuário [robertoSilva](user)?
+      - Quero conhecer mais sobre o usuário [claudiaNascimento](user)
+      - Me mostre as informações do usuário [ricardoSantos](user)
+      - O que temos sobre o usuário [luizaMartins](user)?
+      - Me conte mais sobre o usuário [andreAlmeida](user)
+      - Quais são os detalhes do usuário [patriciaOliveira](user)?
+      - Quais informações estão disponíveis para o usuário [miguelFerreira](user)?
+      - Me fale mais sobre o usuário [raquelVieira](user)
+      - Quero saber os detalhes do usuário [gabrielSilva](user)
+      - Mostre os detalhes do usuário [danielaCosta](user)
+      - Diga-me os detalhes do usuário [antonioGomes](user)
+      - O que temos de informações sobre o usuário [julianaPereira](user)?
+      - Me forneça mais informações sobre o usuário [rafaelMendes](user)
+      - Quais são os pormenores do usuário [eduardaNascimento](user)?
+      - Quero mais detalhes sobre o usuário [gustavoLima](user)
+      - Me mostre as informações do usuário [isabelaSantos](user)
+      - O que sabemos sobre o usuário [leonardoCosta](user)?
+      - Me conte mais sobre o usuário [camilaOliveira](user)
+      - Quais são os detalhes do usuário [matheusFerreira](user)?
+      - Quais informações temos sobre o usuário [vivianeSilva](user)?
+      - Me fale sobre o usuário [thiagoBarbosa](user)
+      - Quero mais informações sobre o usuário [luanaVieira](user)
+      - Quais são os detalhes do usuário [victorMartins](user)?
+      - Mostre-me os detalhes do usuário [sofiaAlmeida](user)
+      - O que sabemos sobre o usuário [felipePereira](user)?
+      - Me forneça detalhes do usuário [brunaOliveira](user)
+      - Diga-me mais sobre o usuário [marianaSantos](user)
+      - Quais são os pormenores do usuário [nataliaCosta](user)?
+      - Quero conhecer mais sobre o usuário [rodrigoGomes](user)
+      - Me mostre as informações do usuário [tatiLima](user)
+      - O que temos sobre o usuário [vitorMendes](user)?
+      - Me conte mais sobre o usuário [elisaNascimento](user)
+      - Quais são os detalhes do usuário [lucasFerreira](user)?
+      - Quais informações estão disponíveis para o usuário [renataSilva](user)?
+      - Me fale mais sobre o usuário [joaquimBarbosa](user)
+      - Quero saber os detalhes do usuário [milenaVieira](user)
+      - Mostre os detalhes do usuário [joanaMartins](user)
+      - Diga-me os detalhes do usuário [arthurAlmeida](user)
+      - O que temos de informações sobre o usuário [inesPereira](user)?
+      - Me forneça mais informações sobre o usuário [saraOliveira](user)
+      - Quais são os pormenores do usuário [pauloSantos](user)?
+      - Quero mais detalhes sobre o usuário [alineCosta](user)
+      - Me mostre as informações do usuário [henriqueGomes](user)
+      - O que sabemos sobre o usuário [marcosLima](user)?
+      - Me conte mais sobre o usuário [julioFerreira](user)

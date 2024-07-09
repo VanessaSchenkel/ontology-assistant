@@ -1,0 +1,83 @@
+version: "3.1"
+
+intents:
+  - greet
+  - list_commands
+  - list_tasks
+  - list_devices
+  - list_events
+  - list_users
+  - list_high_priority_events
+  - get_event_details
+  - get_user_details
+
+entities:
+  - command
+  - task
+  - device
+  - event
+  - user
+
+slots:
+  command:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: command
+  task:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: task
+  device:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: device
+  event:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: event
+  user:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: user
+
+responses:
+  utter_greet:
+    - text: "Olá! Como posso ajudar você hoje?"
+    - text: "Oi! Em que posso ser útil?"
+    - text: "Ei! O que você precisa?"
+  utter_list_commands:
+    - text: "Os comandos são: {command}"
+  utter_list_tasks:
+    - text: "As tarefas são: {task}"
+  utter_list_devices:
+    - text: "Os dispositivos são: {device}"
+  utter_list_events:
+    - text: "Os eventos são: {event}"
+  utter_list_users:
+    - text: "Os usuários são: {user}"
+  utter_list_high_priority_events:
+    - text: "Os eventos de alta prioridade são: {event}"
+  utter_get_event_details:
+    - text: "Os detalhes do evento {event} são: ..."
+  utter_get_user_details:
+    - text: "Os detalhes do usuário {user} são: ..."
+
+actions:
+  - action_greet
+  - action_list_commands
+  - action_list_tasks
+  - action_list_devices
+  - action_list_events
+  - action_list_users
+  - action_list_high_priority_events
+  - action_get_event_details
+  - action_get_user_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

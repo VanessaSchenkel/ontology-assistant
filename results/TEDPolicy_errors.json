@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Quais são os detalhes do evento aniversarioCarlos?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 49,
+        "value": "aniversarioCarlos",
+        "entity": "event"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Quais são os detalhes do usuário JohnDoe?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 40,
+        "value": "JohnDoe",
+        "entity": "user"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

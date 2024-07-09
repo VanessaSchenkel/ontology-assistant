@@ -1,0 +1,60 @@
+stories:
+  - story: listar comandos
+    steps:
+      - user: |
+          Liste todos os comandos
+        intent: list_commands
+      - action: action_list_commands
+
+  - story: listar tarefas
+    steps:
+      - user: |
+          Liste todas as tarefas
+        intent: list_tasks
+      - action: action_list_tasks
+
+  - story: listar dispositivos
+    steps:
+      - user: |
+          Liste todos os dispositivos
+        intent: list_devices
+      - action: action_list_devices
+
+  - story: listar eventos
+    steps:
+      - user: |
+          Liste todos os eventos
+        intent: list_events
+      - action: action_list_events
+
+  - story: listar usuários
+    steps:
+      - user: |
+          Liste todos os usuários
+        intent: list_users
+      - action: action_list_users
+
+  - story: listar eventos de alta prioridade
+    steps:
+      - user: |
+          Liste todos os eventos com alta prioridade
+        intent: list_high_priority_events
+      - action: action_list_high_priority_events
+
+  - story: obter detalhes do evento
+    steps:
+      - user: |
+          Quais são os detalhes do evento [aniversarioCarlos](event)?
+        intent: get_event_details
+        entities:
+          - event: aniversarioCarlos
+      - action: action_get_event_details
+
+  - story: obter detalhes do usuário
+    steps:
+      - user: |
+          Quais são os detalhes do usuário [JohnDoe](user)?
+        intent: get_user_details
+        entities:
+          - user: JohnDoe
+      - action: action_get_user_details

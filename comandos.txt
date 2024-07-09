@@ -1,0 +1,63 @@
+#### Listar todos os comandos e seus textos
+
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+
+SELECT ?comando ?texto
+WHERE {
+  ?comando a va:Comando ;
+           va:commandText ?texto .
+}
+
+#### Listar tarefas e suas datas de conclusão
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+
+SELECT ?tarefa ?dataConclusao
+WHERE {
+  ?tarefa a va:Tarefa ;
+          va:dueDate ?dataConclusao .
+}
+
+#### Encontrar todos os dispositivos e seus status
+
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+
+SELECT ?dispositivo ?status
+WHERE {
+  ?dispositivo a va:Dispositivo ;
+               va:deviceStatus ?status .
+}
+
+#### Eventos e suas datas programadas
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+
+SELECT ?evento ?data
+WHERE {
+  ?evento a va:Evento ;
+          va:eventDate ?data .
+}
+
+### Listar todos os usuários com seus e-mails
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+SELECT ?user ?userEmail
+WHERE {
+  ?user a va:Usuário .
+  ?user va:userEmail ?userEmail .
+}
+
+### Listar todos os comandos com seus textos
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+SELECT ?command ?commandText
+WHERE {
+  ?command a va:Comando .
+  ?command va:commandText ?commandText .
+}
+
+### Listar todos os eventos com alta prioridade
+PREFIX va: <http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#>
+SELECT ?event ?eventDate
+WHERE {
+  ?event a va:Evento .
+  ?event va:priorityLevel ?priority .
+  FILTER (?priority = "Alta") .
+  ?event va:eventDate ?eventDate .
+}

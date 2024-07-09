@@ -1,0 +1,28 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ligar_luz\"}}]": "action_check_device_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ligar_luz\"}}, {\"prev_action\": {\"action_name\": \"action_check_device_status\"}, \"user\": {\"intent\": \"ligar_luz\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"tocar_musica\"}}]": "action_check_device_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"tocar_musica\"}}, {\"prev_action\": {\"action_name\": \"action_check_device_status\"}, \"user\": {\"intent\": \"tocar_musica\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"parar_musica\"}}]": "utter_parar_musica",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"parar_musica\"}}, {\"prev_action\": {\"action_name\": \"utter_parar_musica\"}, \"user\": {\"intent\": \"parar_musica\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"previsao_tempo\"}}]": "utter_previsao_tempo",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"previsao_tempo\"}}, {\"prev_action\": {\"action_name\": \"utter_previsao_tempo\"}, \"user\": {\"intent\": \"previsao_tempo\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_eventos\"}}]": "action_listar_eventos",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_eventos\"}}, {\"prev_action\": {\"action_name\": \"action_listar_eventos\"}, \"user\": {\"intent\": \"listar_eventos\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"desligar_luz\"}}]": "action_check_device_status",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"desligar_luz\"}}, {\"prev_action\": {\"action_name\": \"action_check_device_status\"}, \"user\": {\"intent\": \"desligar_luz\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_usuarios\"}}]": "utter_listar_usuarios",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"listar_usuarios\"}}, {\"prev_action\": {\"action_name\": \"utter_listar_usuarios\"}, \"user\": {\"intent\": \"listar_usuarios\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent restart",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

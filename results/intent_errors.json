@@ -1,0 +1,386 @@
+[
+  {
+    "text": "Quais são as instruções que posso dar?",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9569496512413025
+    }
+  },
+  {
+    "text": "Me mostre as instruções disponíveis",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.7424912452697754
+    }
+  },
+  {
+    "text": "Mostre-me todas as instruções possíveis",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9984102249145508
+    }
+  },
+  {
+    "text": "Quais são as instruções que posso usar?",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.7957577705383301
+    }
+  },
+  {
+    "text": "Quais instruções posso dar?",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.7662864327430725
+    }
+  },
+  {
+    "text": "Me informe sobre as instruções",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9620670676231384
+    }
+  },
+  {
+    "text": "Mostre todas as instruções disponíveis",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.983328104019165
+    }
+  },
+  {
+    "text": "Quais são todas as instruções possíveis?",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9974206686019897
+    }
+  },
+  {
+    "text": "Exiba todas as instruções que posso usar",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9916648268699646
+    }
+  },
+  {
+    "text": "Que instruções existem?",
+    "intent": "list_commands",
+    "intent_prediction": {
+      "name": "list_users",
+      "confidence": 0.8973889350891113
+    }
+  },
+  {
+    "text": "O que eu tenho para fazer hoje?",
+    "intent": "list_tasks",
+    "intent_prediction": {
+      "name": "get_user_details",
+      "confidence": 0.7124654650688171
+    }
+  },
+  {
+    "text": "Quais atividades eu tenho hoje?",
+    "intent": "list_tasks",
+    "intent_prediction": {
+      "name": "list_high_priority_events",
+      "confidence": 0.8087292313575745
+    }
+  },
+  {
+    "text": "Quais atividades eu preciso fazer?",
+    "intent": "list_tasks",
+    "intent_prediction": {
+      "name": "list_high_priority_events",
+      "confidence": 0.9501712918281555
+    }
+  },
+  {
+    "text": "Quais são as atividades pendentes?",
+    "intent": "list_tasks",
+    "intent_prediction": {
+      "name": "list_high_priority_events",
+      "confidence": 0.7817894220352173
+    }
+  },
+  {
+    "text": "Que atividades estão previstas?",
+    "intent": "list_tasks",
+    "intent_prediction": {
+      "name": "list_high_priority_events",
+      "confidence": 0.9167826771736145
+    }
+  },
+  {
+    "text": "O que eu posso controlar?",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "get_event_details",
+      "confidence": 0.7865244150161743
+    }
+  },
+  {
+    "text": "Quais são os aparelhos conectados?",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_commands",
+      "confidence": 0.5939787030220032
+    }
+  },
+  {
+    "text": "Quais são os aparelhos conectados à rede?",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_commands",
+      "confidence": 0.5367119908332825
+    }
+  },
+  {
+    "text": "Quais aparelhos posso usar?",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.8274255990982056
+    }
+  },
+  {
+    "text": "Me informe sobre os aparelhos conectados",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_commands",
+      "confidence": 0.6076824069023132
+    }
+  },
+  {
+    "text": "Mostre todas as opções de aparelhos",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.999096155166626
+    }
+  },
+  {
+    "text": "Exiba todas as opções de aparelhos que posso usar",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9827873706817627
+    }
+  },
+  {
+    "text": "Que aparelhos existem?",
+    "intent": "list_devices",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.7582992315292358
+    }
+  },
+  {
+    "text": "O que eu tenho para fazer hoje?",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "get_user_details",
+      "confidence": 0.7124654650688171
+    }
+  },
+  {
+    "text": "Quais são as atividades programadas?",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9616595506668091
+    }
+  },
+  {
+    "text": "Quais atividades eu tenho hoje?",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "list_high_priority_events",
+      "confidence": 0.8087292313575745
+    }
+  },
+  {
+    "text": "Liste as atividades do dia",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9028788805007935
+    }
+  },
+  {
+    "text": "Mostre todas as atividades",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.9991462230682373
+    }
+  },
+  {
+    "text": "Quais são as atividades para hoje?",
+    "intent": "list_events",
+    "intent_prediction": {
+      "name": "list_tasks",
+      "confidence": 0.8638194799423218
+    }
+  },
+  {
+    "text": "Quais são os eventos urgentes?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9990119934082031
+    }
+  },
+  {
+    "text": "Quais são os eventos mais urgentes?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9837950468063354
+    }
+  },
+  {
+    "text": "Quais eventos são considerados urgentes?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9945939183235168
+    }
+  },
+  {
+    "text": "Quais eventos são mais críticos?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9882127642631531
+    }
+  },
+  {
+    "text": "Mostre os eventos urgentes",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9996209144592285
+    }
+  },
+  {
+    "text": "Quais são os eventos críticos?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9995912909507751
+    }
+  },
+  {
+    "text": "Liste os eventos urgentes",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9991531372070312
+    }
+  },
+  {
+    "text": "Quais eventos são mais urgentes?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9715479016304016
+    }
+  },
+  {
+    "text": "Me mostre os eventos críticos",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9997960925102234
+    }
+  },
+  {
+    "text": "Quais eventos precisam de atenção?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.8236305713653564
+    }
+  },
+  {
+    "text": "Liste os eventos críticos",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9995877146720886
+    }
+  },
+  {
+    "text": "Quais eventos são mais relevantes?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.6448747515678406
+    }
+  },
+  {
+    "text": "Quais são os eventos que precisam de atenção?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9653288125991821
+    }
+  },
+  {
+    "text": "Quais eventos têm urgência?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.999065101146698
+    }
+  },
+  {
+    "text": "Quais eventos têm maior urgência?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.9618064165115356
+    }
+  },
+  {
+    "text": "Quais eventos precisam de atenção urgente?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.8855375647544861
+    }
+  },
+  {
+    "text": "Quais são os eventos com maior urgência?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.8094998598098755
+    }
+  },
+  {
+    "text": "Quais eventos têm alta urgência?",
+    "intent": "list_high_priority_events",
+    "intent_prediction": {
+      "name": "list_events",
+      "confidence": 0.6913233399391174
+    }
+  },
+  {
+    "text": "Quais são os pormenores do usuário pauloSantos?",
+    "intent": "get_user_details",
+    "intent_prediction": {
+      "name": "list_users",
+      "confidence": 0.5002508759498596
+    }
+  }
+]

@@ -1,0 +1,1524 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents/"
+     xml:base="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:virtual-assistents="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#affects">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#belongsToUser -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#belongsToUser">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#followsUpOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#followsUpOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasContext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasContext">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasIntention -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasIntention">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasIntention"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Intenção"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasPriority -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasPriority">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasSubtask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasSubtask">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoLocal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#managesDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#managesDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Admin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#performedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#performedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#providesResponse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#providesResponse">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Pergunta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#triggeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#triggeredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#usesDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#usesDevice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#commandText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#commandText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Armazena o texto literal de um comando dado pelo usuário.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#deviceStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#deviceStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Status atual do dispositivo, como &apos;on&apos;, &apos;off&apos;, &apos;standby&apos;.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#dueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#dueDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Data e hora de quando a tarefa deve ser concluída.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#eventDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#eventDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Data e hora de quando o evento está programado ou ocorreu.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasDueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#hasDueDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#priorityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#priorityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Um valor numérico representando a prioridade, onde valores mais altos indicam maior prioridade.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#responseText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#responseText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>O texto da resposta fornecida pelo sistema ou assistente virtual.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#userEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#userEmail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Endereço de e-mail do usuário.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#userName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#userName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Nome ou identificador do usuário.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Admin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Regular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#AjustarTemperatura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#AjustarTemperatura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeControleCasa"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Alta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Alta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Baixa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Baixa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarLocalização -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarLocalização">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeNavegação"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ObterDireções"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarNotícia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarNotícia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeInformação"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarPrevisãoDoTempo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarPrevisãoDoTempo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarPrevisãoDoTempo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeInformação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeComunicação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeComunicação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeControleCasa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeControleCasa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeEntretenimento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeEntretenimento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeGerenciamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeGerenciamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeInformação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeInformação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeNavegação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeNavegação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeServiço -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeServiço">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeTempo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeTempo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDireto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDireto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Interação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarAlarme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarAlarme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeTempo"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarLembrete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarLembrete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarLembrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeTempo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarReunião -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ConfigurarReunião">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaProfissional"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#GerenciarEmails"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeAtividade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeAtividade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeHumor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeHumor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoLocal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoLocal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoTemporal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoTemporal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoTemporal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Contexto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeControleCasa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoMóvel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoMóvel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#EncomendarComida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#EncomendarComida">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeServiço"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ReservarVoo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#EnviarMensagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#EnviarMensagem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeComunicação"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FazerChamada"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FazerChamada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FazerChamada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeComunicação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Feedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Feedback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Interação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FitnessTracker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FitnessTracker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Wearable"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartWatch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#GerenciarEmails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#GerenciarEmails">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaProfissional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Hora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Hora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Informação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Informação"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#InformaçãoFinanceira -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#InformaçãoFinanceira">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Informação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Intenção -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Intenção"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeAção -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeAção">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Intenção"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeConsulta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeConsulta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeConsulta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Intenção"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Interação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Interação"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#LembreteDeHidratação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#LembreteDeHidratação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDiária"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#LembreteDeMedicação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#LembreteDeMedicação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#LembreteDeMedicação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDiária"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Média -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Média">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Música -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Música">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Entidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Notícia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Notícia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Informação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#NívelDePrioridade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ObterDireções -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ObterDireções">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeNavegação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#OrganizarViagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#OrganizarViagem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDeLazer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PlanejarCinema"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararMúsica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararMúsica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararVídeo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararVídeo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Pergunta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Pergunta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Interação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PlanejarCinema -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PlanejarCinema">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDeLazer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PrevisãoDoTempo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PrevisãoDoTempo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Informação"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Regular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Regular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ReservarVoo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ReservarVoo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeServiço"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaErro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaErro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaInformação -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaInformação">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaSucesso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaSucesso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartFridge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartFridge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartTV"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartTV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartTV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartWatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Wearable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Smartphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Smartphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoMóvel"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tablet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tablet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tablet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoMóvel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDeLazer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDeLazer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDiária -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDiária">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaProfissional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaProfissional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarMúsica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarMúsica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarVídeo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarVídeo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeMídia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Wearable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Wearable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#JohnDoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#JohnDoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <virtual-assistents:userEmail>John Doe</virtual-assistents:userEmail>
+        <virtual-assistents:userEmail>john.doe@gmail.com</virtual-assistents:userEmail>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#agendarConsulta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#agendarConsulta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-10-10T09:00:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aliceJohnson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aliceJohnson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <virtual-assistents:userEmail>alice.johnson@gmail.com</virtual-assistents:userEmail>
+        <virtual-assistents:userName>Alice Johnson</virtual-assistents:userName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aniversarioCarlos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aniversarioCarlos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-07-20T18:00:00</virtual-assistents:eventDate>
+        <virtual-assistents:priorityLevel>Alta</virtual-assistents:priorityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#arCondicionadoQuarto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#arCondicionadoQuarto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <virtual-assistents:deviceStatus>standby</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aspiradorRobo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aspiradorRobo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <virtual-assistents:deviceStatus>desligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aumentarTemperatura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#aumentarTemperatura">
+        <virtual-assistents:commandText>Aumentar a temperatura do ar condicionado</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#cameraSegurançaCasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#cameraSegurançaCasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+        <virtual-assistents:deviceStatus>desligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#checarTempo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#checarTempo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeConsulta"/>
+        <virtual-assistents:commandText>Qual é a previsão do tempo para hoje?</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#comprarAlimentos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#comprarAlimentos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-08-01T10:00:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#consultorioDentista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#consultorioDentista">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-09-05T09:00:00</virtual-assistents:eventDate>
+        <virtual-assistents:priorityLevel>Baixa</virtual-assistents:priorityLevel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#cozinhaSmartFridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#cozinhaSmartFridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Dispositivo"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#desligarLuz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#desligarLuz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeAção"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#desligarLuzSala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#desligarLuzSala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes"/>
+        <virtual-assistents:hasIntention rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#desligarLuz"/>
+        <virtual-assistents:usesDevice rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzSala"/>
+        <virtual-assistents:commandText>Desligar luz da sala</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#festaHalloween -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#festaHalloween">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-10-31T21:00:00</virtual-assistents:eventDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#fitbitCarlos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#fitbitCarlos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#FitnessTracker"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#geladeiraCozinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#geladeiraCozinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartFridge"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#informarPrevisao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#informarPrevisao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeConsulta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#informarPrevisaoTempo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#informarPrevisaoTempo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#BuscarPrevisãoDoTempo"/>
+        <virtual-assistents:commandText>Informar a previsão do tempo</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#joaoSilva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#joaoSilva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <virtual-assistents:userEmail>joao.silva@example.com</virtual-assistents:userEmail>
+        <virtual-assistents:userName>João Silva</virtual-assistents:userName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#julianaOliveira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#julianaOliveira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <virtual-assistents:userEmail>juliana.oliveira@example.com</virtual-assistents:userEmail>
+        <virtual-assistents:userName>Juliana Oliveira</virtual-assistents:userName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeAção"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuzCozinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuzCozinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes"/>
+        <virtual-assistents:hasIntention rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuz"/>
+        <virtual-assistents:commandText>Ligar a luz da cozinha</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuzDaSala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ligarLuzDaSala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ControlarLuzes"/>
+        <virtual-assistents:usesDevice rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzSala"/>
+        <virtual-assistents:commandText>Ligar luz da sala</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#limparCasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#limparCasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-07-20T08:00:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzCozinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzCozinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <virtual-assistents:deviceStatus>desligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzQuarto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzQuarto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzSala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#luzSala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#marcarManutenção -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#marcarManutenção">
+        <virtual-assistents:performedBy rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#JohnDoe"/>
+        <virtual-assistents:dueDate>2024-08-01T12:00:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#mariaSouza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#mariaSouza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Usuário"/>
+        <virtual-assistents:userEmail>maria.souza@example.com</virtual-assistents:userEmail>
+        <virtual-assistents:userName>Maria Souza</virtual-assistents:userName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#miBandAna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#miBandAna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#SmartWatch"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#pagarContas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#pagarContas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-09-15T15:30:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#pedirPizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#pedirPizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+        <virtual-assistents:commandText>Peça uma pizza grande de pepperoni</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#prepararApresentação -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#prepararApresentação">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-08-10T09:00:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaLuzDesligada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaLuzDesligada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+        <virtual-assistents:responseText>A luz foi desligada.</virtual-assistents:responseText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaLuzLigada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaLuzLigada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaSucesso"/>
+        <virtual-assistents:responseText>A luz foi ligada.</virtual-assistents:responseText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaMusicaTocando -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaMusicaTocando">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+        <virtual-assistents:responseText>A música está tocando.</virtual-assistents:responseText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaPrevisaoInformada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#respostaPrevisaoInformada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Resposta"/>
+        <virtual-assistents:responseText>A previsão do tempo foi informada.</virtual-assistents:responseText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#reuniaoEquipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#reuniaoEquipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-11-25T12:00:00</virtual-assistents:eventDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#reuniãoSemanal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#reuniãoSemanal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-07-10T09:00:00</virtual-assistents:eventDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#smartphoneJoao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#smartphoneJoao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Smartphone"/>
+        <virtual-assistents:deviceStatus>ligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#submeterRelatório -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#submeterRelatório">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tarefa"/>
+        <virtual-assistents:dueDate>2024-08-15T23:59:00</virtual-assistents:dueDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tabletMaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tabletMaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Tablet"/>
+        <virtual-assistents:deviceStatus>desligado</virtual-assistents:deviceStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#teamOuting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#teamOuting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Evento"/>
+        <virtual-assistents:eventDate>2024-10-05T10:00:00</virtual-assistents:eventDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarJazz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarJazz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Comando"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarMúsica"/>
+        <virtual-assistents:commandText>Tocar jazz</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarMusica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarMusica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#IntençãoDeAção"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarMusicaClassica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#tocarMusicaClassica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarMúsica"/>
+        <virtual-assistents:commandText>Tocar música clássica</virtual-assistents:commandText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Alta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Baixa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Média"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeEntretenimento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeGerenciamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDeTempo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ComandoDireto"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Feedback"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Pergunta"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeAtividade"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoDeHumor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoLocal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#ContextoTemporal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoDoméstico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#DispositivoMóvel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Wearable"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#InformaçãoFinanceira"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#Notícia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PrevisãoDoTempo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararMúsica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#PararVídeo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarMúsica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TocarVídeo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaErro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaInformação"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#RespostaSucesso"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDeLazer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaDiária"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/vanessa.schenkel/ontologies/2024/6/virtual-assistents#TarefaProfissional"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

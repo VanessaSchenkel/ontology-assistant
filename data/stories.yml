@@ -1,0 +1,69 @@
+version: "3.1"
+stories:
+  - story: greet path 1
+    steps:
+      - user: |
+          - Olá
+          - Oi
+        intent: greet
+      - action: utter_greet
+
+  - story: greet path 2
+    steps:
+      - user: |
+          - Bom dia
+          - Boa tarde
+        intent: greet
+      - action: utter_greet
+
+  - story: greet path 3
+    steps:
+      - user: |
+          - E aí
+          - Como vai?
+        intent: greet
+      - action: utter_greet
+
+  - story: Listar todos os comandos
+    steps:
+      - intent: list_commands
+      - action: action_list_commands
+
+  - story: Listar todas as tarefas
+    steps:
+      - intent: list_tasks
+      - action: action_list_tasks
+
+  - story: Listar todos os dispositivos
+    steps:
+      - intent: list_devices
+      - action: action_list_devices
+
+  - story: Listar todos os eventos
+    steps:
+      - intent: list_events
+      - action: action_list_events
+
+  - story: Listar todos os usuários
+    steps:
+      - intent: list_users
+      - action: action_list_users
+
+  - story: Listar eventos de alta prioridade
+    steps:
+      - intent: list_high_priority_events
+      - action: action_list_high_priority_events
+
+  - story: Obter detalhes de um evento
+    steps:
+      - intent: get_event_details
+        entities:
+          - event: "aniversarioCarlos"
+      - action: action_get_event_details
+
+  - story: Obter detalhes de um usuário
+    steps:
+      - intent: get_user_details
+        entities:
+          - user: "aliceJohnson"
+      - action: action_get_user_details
